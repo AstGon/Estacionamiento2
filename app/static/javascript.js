@@ -203,3 +203,11 @@ document.getElementById("telefono").addEventListener("input", function () {
         telefonoError.textContent = "";
     }
 });
+
+$(document).ready(function () {
+    $('.comuna-option').click(function () {
+        var selectedComuna = $(this).text();
+        $('#comuna').text(selectedComuna);
+        $('#comuna_seleccionada').val(selectedComuna); // Actualiza el campo oculto
+    });
+});
